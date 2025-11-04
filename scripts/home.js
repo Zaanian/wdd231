@@ -96,8 +96,54 @@ hamButton.addEventListener('click', () => {
     hamButton.classList.toggle('show');
 });
 
+// filter list
 
+function courseTemplate(course) {
+    if (course.completed == true) {
+        return `<p class=complete >${course.subject} ${course.number}</p>`
+    } else {
+        return `<p class=incomplete >${course.subject} ${course.number}</p>`
+    }
 
+}
 
+function showCourses(course) {
+    const html = course.map(courseTemplate);
+    document.getElementById("courses").innerHTML = html.join("");
 
+}
+//filter by subject
+const allWDD = courses.filter(wdd => wdd.subject == "WDD");
+const allCSE = courses.filter(cse => cse.subject == "CSE");
 
+//filter by completion
+
+const courseCompleted = courses.filter(complete => complete.completed == true)
+const wddCompleted = allWDD.filter(complete => complete.completed == true)
+const cseCompleted = allCSE.filter(complete => complete.completed == true)
+
+//total credits
+function addCredits(course) {
+    const totalSum = course.reduce((accumulator, courseCredits) => {
+        return accumulator + courseCredits.credits;
+    }, 0);
+    return `${totalSum}`
+}
+
+function showCredits(credit) {
+    const htmlCredit = addCredits(credit);
+    document.getElementById("credits").innerHTML = htmlCredit;
+}
+
+//Buttons
+allButton = document.getElementById("all");
+allButton.addEventListener("click", () => { showCourses(courses) });
+allButton.addEventListener("click", () => { showCredits(courseCompleted) });
+
+wddButton = document.getElementById("wdd");
+wddButton.addEventListener("click", () => { showCourses(allWDD) });
+wddButton.addEventListener("click", () => { showCredits(wddCompleted) });
+
+cseButton = document.getElementById("cse");
+cseButton.addEventListener("click", () => { showCourses(allCSE) });
+cseButton.addEventListener("click", () => { showCredits(cseCompleted) });
