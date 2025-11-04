@@ -7,14 +7,18 @@
     <title>Document</title>
     <meta name="description" content="">
     <meta name="author" content="Stephen Stauffer">
-    <link rel="stylesheets" href="styles/home-small.css">
-    <script src="scripts/home-dates.js" defer></script>
+    <link rel="stylesheet" href="styles/home-small.css">
+    <link rel="stylesheet" href="styles/home-large.css">
+    <script src="scripts/home.js" defer></script>
 
 </head>
 
 <body>
     <header>
-        <img src="images/logo.svg" alt="logo-image"><span>Stephen Stauffer</span>
+        <div id="logo-name"><img src="images/logo.svg" width="40px" height="40px" alt="logo-image"><span
+                id="site-name">Stephen
+                Stauffer</span>
+        </div>
         <nav>
             <a id="menu" href="#"></a>
             <ul class="navigation">
@@ -25,16 +29,19 @@
 
         </nav>
     </header>
-    <main>
-        <h1>Home</h1>
-        <section>
+    <main class="main">
+
+        <h1 id="home-head">Home</h1>
+        <section class="about-me">
             <h2>About Me</h2>
+            <p>Ibsum Om Inor.</p>
         </section>
-        <section>
+        <section class="student-photo">
             <h2>Student Photo</h2>
+            <img src="images/myself-photo3-mobile.jpg" alt="student-photo">
 
         </section>
-        <section>
+        <section class="web-certificate">
             <h2>Web Certificate Courses</h2>
         </section>
 
