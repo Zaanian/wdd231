@@ -1,10 +1,32 @@
-header {
-    margin: 10px;
+/*Mobile View*/
+
+#menu {
+    display: block;
+    font-size: 2rem;
+    padding: 10px;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+.navigation {
+    list-style: none;
+    margin: 0 auto;
+    max-width: 760px;
+
 
 }
 
-
-
-main {
-    margin: 10px;
+.navigation li {
+    display: none;
 }
+
+#menu.show::before {
+    content: "X";
+}
+
+.show li {
+    display: block;
+}
+
