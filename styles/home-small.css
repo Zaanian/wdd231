@@ -33,12 +33,25 @@ header {
     content: "☰";
 }
 
+h1 {
+    background-color: black;
+    color: aliceblue;
+}
+
+h2 {
+    background-color: black;
+    color: aliceblue;
+}
+
 .navigation {
     list-style: none;
     margin: 0 auto;
     max-width: 760px;
+}
 
-
+.navigation li a:hover {
+    color: blue;
+    text-decoration: overline;
 }
 
 #image-logo {
