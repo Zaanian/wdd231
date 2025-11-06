@@ -147,3 +147,4 @@ wddButton.addEventListener("click", () => { showCredits(wddCompleted) });
 cseButton = document.getElementById("cse");
 cseButton.addEventListener("click", () => { showCourses(allCSE) });
 cseButton.addEventListener("click", () => { showCredits(cseCompleted) });
+
