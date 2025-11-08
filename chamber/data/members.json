@@ -1,0 +1,60 @@
+{
+    "companies": [
+        {
+            "name": "Lowes",
+            "address": "3511 5 St SE",
+            "Phone": "(253) 604-5080",
+            "websiteURLs": "https://www.lowes.com/",
+            "image": "#",
+            "membershiplevel": "3"
+        },
+        {
+            "name": "IT Support & Managed IT Services",
+            "address": "1606 3 St SE",
+            "Phone": "(253) 848-5968",
+            "websiteURLs": "https://www.amstechnology.net",
+            "image": "#",
+            "membershiplevel": "2"
+        },
+        {
+            "name": "Office Depot",
+            "address": "3715 S Meridian",
+            "Phone": "(253) 445-3780",
+            "websiteURLs": "www.homedepot.com",
+            "image": "#",
+            "membershiplevel": "1"
+        },
+        {
+            "name": "Drain Pro",
+            "address": "1903 17th St NW C2",
+            "Phone": "(253) 289-3262",
+            "websiteURLs": "https://drain-proinc.com/",
+            "image": "#",
+            "membershiplevel": "3"
+        },
+        {
+            "name": "Puyallup Farmers Market",
+            "address": "330 S Meridian",
+            "Phone": "(253) 840-2631",
+            "websiteURLs": "http://www.puyallupfarmersmarket.com/",
+            "image": "#",
+            "membershiplevel": "3"
+        },
+        {
+            "name": "Minutemen Press",
+            "address": "2102 E Main Ave # 111",
+            "Phone": "(253) 841-3161",
+            "websiteURLs": "https://minuteman.com/us/locations/wa/puyallup/",
+            "image": "#",
+            "membershiplevel": "2"
+        },
+        {
+            "name": "Azure Green Consultants",
+            "address": "999 52nd str E",
+            "Phone": "(384) 464-2847",
+            "websiteURLs": "www.Woodieworks.com",
+            "image": "#",
+            "membershiplevel": "1"
+        }
+    ]
+}
