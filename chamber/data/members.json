@@ -5,7 +5,7 @@
             "address": "3511 5 St SE",
             "Phone": "(253) 604-5080",
             "websiteURLs": "https://www.lowes.com/",
-            "image": "#",
+            "image": "images/Lowes.png",
             "membershiplevel": "3"
         },
         {
@@ -13,7 +13,7 @@
             "address": "1606 3 St SE",
             "Phone": "(253) 848-5968",
             "websiteURLs": "https://www.amstechnology.net",
-            "image": "#",
+            "image": "images/ITSMS.png",
             "membershiplevel": "2"
         },
         {
@@ -21,7 +21,7 @@
             "address": "3715 S Meridian",
             "Phone": "(253) 445-3780",
             "websiteURLs": "www.homedepot.com",
-            "image": "#",
+            "image": "images/Office-Depot.png",
             "membershiplevel": "1"
         },
         {
@@ -29,7 +29,7 @@
             "address": "1903 17th St NW C2",
             "Phone": "(253) 289-3262",
             "websiteURLs": "https://drain-proinc.com/",
-            "image": "#",
+            "image": "images/Drain-Pro.png",
             "membershiplevel": "3"
         },
         {
@@ -37,7 +37,7 @@
             "address": "330 S Meridian",
             "Phone": "(253) 840-2631",
             "websiteURLs": "http://www.puyallupfarmersmarket.com/",
-            "image": "#",
+            "image": "images/farmer-market.png",
             "membershiplevel": "3"
         },
         {
@@ -45,15 +45,15 @@
             "address": "2102 E Main Ave # 111",
             "Phone": "(253) 841-3161",
             "websiteURLs": "https://minuteman.com/us/locations/wa/puyallup/",
-            "image": "#",
+            "image": "chamber/images/Minutemen-Press.png",
             "membershiplevel": "2"
         },
         {
             "name": "Azure Green Consultants",
             "address": "999 52nd str E",
             "Phone": "(384) 464-2847",
-            "websiteURLs": "www.Woodieworks.com",
-            "image": "#",
+            "websiteURLs": "https://www.azuregreenconsultants.com/",
+            "image": "chamber/images/AGZ.png",
             "membershiplevel": "1"
         }
     ]
