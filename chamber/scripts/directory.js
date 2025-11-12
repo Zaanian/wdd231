@@ -18,11 +18,26 @@ hamButton.addEventListener('click', () => {
 // json data retrival 
 async function getdata() {
     const response = await fetch("data/members.json");
-    const data = response.json();
-    console.log(data)
+    const data = await response.json();
+    console.log(data.companies);
+    return data.companies;
 }
 
-const companyData = getdata()
+const CData = getdata();
 
+// company cards
 
+const displayCompanies = (companies) => {
+    companies.array.forEach(companies => {
+        let card = document.createElement("section");
+        let name = document.createElement("p")
+        let portrait = document.createElement("img")
+
+        name.textContent = `${companies[0]}`
+
+        card.appendChild(name)
+
+        cards.appendChild(card)
+    });
+}
 
