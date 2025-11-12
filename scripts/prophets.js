@@ -11,12 +11,14 @@ async function getProphetData(url) {
 
 getProphetData(weburl);
 
+function display() {
 
+}
 const displayProphets = (prophets) => {
     prophets.forEach((prophet) => {
         // Create elements to add to the div.cards element
         let card = document.createElement('section');
-        let fullName = document.createElement('p'); // fill in the blank
+        let fullName = document.createElement('h2'); // fill in the blank
         //let portrait = document.createElement('img');
 
         // Build the h2 content out to show the prophet's full name
