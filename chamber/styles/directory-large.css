@@ -1,0 +1,79 @@
+@media screen and (min-width:480px) {
+
+    
+
+    #cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin: 5px;
+
+    }
+
+    .comp-card {
+        margin: 5px;
+        border: solid;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row-reverse;
+
+
+    }
+
+    .navigation li {
+        display: block;
+        margin: 8px;
+    }
+
+    #logo-name {
+        margin: 10px;
+    }
+
+    nav {
+        margin: 10px;
+    }
+
+    .main {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+    }
+
+    #home-head {
+        grid-column: 1/4;
+        margin: 5px;
+    }
+
+
+    #buttons button {
+        margin: 10px;
+        padding: 10px;
+        border: solid;
+    }
+
+    #buttons button:hover {
+        background-color: #333;
+        color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+
+
+    footer {
+        text-align: center;
+        margin: 5px;
+
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+}
