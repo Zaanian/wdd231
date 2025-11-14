@@ -7,7 +7,7 @@ document.getElementById("lastmodified").textContent = ("Last modified " + lastmo
 
 // hamburger button for menu in mobile size
 const hamButton = document.querySelector('#menu');
-const mainnav = document.querySelector('.navigation');
+const mainnav = document.querySelector('#navigation');
 
 hamButton.addEventListener('click', () => {
     mainnav.classList.toggle('show');
@@ -142,3 +142,4 @@ listButton.addEventListener("click", () => {
 
 });
 
+getDataGrid(weburl)

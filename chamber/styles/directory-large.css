@@ -15,14 +15,20 @@
         border: solid;
     }
 
-    .navigation {
+    #menu {
+        display: none;
+    }
+
+    ul {
         display: flex;
         flex-direction: row-reverse;
     }
 
-    .navigation li {
+    #navigation li {
+        display: block;
         margin: 10px;
     }
+
 
     main {
         text-align: center;
