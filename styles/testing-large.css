@@ -2,13 +2,13 @@
 
     html,
     body {
-        min-height: 100vh;
-        margin: 0;
+
         display: grid;
         grid-template-rows: auto 1fr auto;
         grid-template-columns: 1fr;
 
     }
+
 
     header {
         grid-row: 1;
@@ -39,12 +39,18 @@
     }
 
 
-    #cards {
+    .gridform {
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
         justify-content: center;
         margin: 5px;
+
+    }
+
+    .listform {
+        display: block;
+
 
     }
 

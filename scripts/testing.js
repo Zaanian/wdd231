@@ -33,11 +33,7 @@ async function getDataList(url) {
     displayCompaniesList(data.companies);
 }
 
-function clearData() {
 
-    let item = document.getElementsByClassName("comp-card")
-    item.remove()
-}
 
 // company cards
 //grid
@@ -85,9 +81,9 @@ const displayCompaniesList = (companies) => {
         let line = document.createElement("p")
 
 
-        card.classList.add("list-card");
+        card.classList.add("comp-card");
 
-        line.innerHTML = `${company.name}  ${company.address}  ${company.phone}`
+        line.innerHTML = `${company.name},  ${company.address}, ${company.phone}`
 
         name.textContent = `${company.name}`
         address.textContent = `Address: ${company.address}`
@@ -101,12 +97,48 @@ const displayCompaniesList = (companies) => {
 
     });
 }
+//clear data for new data
+function clearDataGrid() {
+    if (document.querySelectorAll(".comp-card").length > 0) {
+        const select = document.querySelectorAll(".comp-card")
+        select.forEach(comp =>
+            comp.parentNode.removeChild(comp)
+        )
+    } else {
+        console.log("no comp-card")
+    }
+
+}
+
+function countingNode() {
+    let testing = document.querySelectorAll(".comp-card")
+    console.log(testing)
+
+}
 
 //
 const gridButton = document.getElementById("grid-button");
 
-gridButton.addEventListener("click", () => { getDataGrid(weburl) });
+
+gridButton.addEventListener("click", () => {
+    let gridElement = document.getElementById("cards");
+    gridElement.classList.remove('listform')
+    gridElement.classList.add('gridform')
+    clearDataGrid();
+    getDataGrid(weburl);
+
+
+});
+
 
 const listButton = document.getElementById("list-button");
 
-listButton.addEventListener("click", () => { getDataList(weburl) });
+listButton.addEventListener("click", () => {
+    let gridElement = document.getElementById("cards");
+    gridElement.classList.remove('gridform')
+    gridElement.classList.add('listform')
+    clearDataGrid();
+    getDataList(weburl);
+
+});
+

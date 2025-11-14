@@ -1,5 +1,3 @@
-
-
 // Set the current year
 document.getElementById("currentyear").textContent = new Date().getFullYear();
 
@@ -19,24 +17,28 @@ hamButton.addEventListener('click', () => {
 const weburl = "data/members.json"
 
 // json data retrival 
-async function getdata(url) {
+//grid 
+async function getDataGrid(url) {
     const response = await fetch(url);
     const data = await response.json();
     console.log(data.companies);
-    displayCompanies(data.companies);
+    displayCompaniesGrid(data.companies);
+}
+
+//list
+async function getDataList(url) {
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data.companies);
+    displayCompaniesList(data.companies);
 }
 
 
-function clearData() {
-
-    let item = document.getElementsByClassName("comp-card")
-    item.remove()
-}
 
 // company cards
+//grid
 const cards = document.getElementById("cards")
-
-const displayCompanies = (companies) => {
+const displayCompaniesGrid = (companies) => {
     companies.forEach(company => {
         let card = document.createElement("section");
         let name = document.createElement("h3")
@@ -68,10 +70,75 @@ const displayCompanies = (companies) => {
 
     });
 }
+//List
+const displayCompaniesList = (companies) => {
+    companies.forEach(company => {
+        let card = document.createElement("section");
+        let name = document.createElement("h3")
+        let address = document.createElement("p")
+        let phones = document.createElement("p")
+        let member = document.createElement("p")
+        let line = document.createElement("p")
+
+
+        card.classList.add("comp-card");
+
+        line.innerHTML = `${company.name},  ${company.address}, ${company.phone}`
+
+        name.textContent = `${company.name}`
+        address.textContent = `Address: ${company.address}`
+        phones.innerHTML = `Phone: ${company.phone}`
+        member.textContent = `Membership Level: ${company.membershiplevel}`
+
+        card.appendChild(line)
+
+
+        cards.appendChild(card)
+
+    });
+}
+//clear data for new data
+function clearDataGrid() {
+    if (document.querySelectorAll(".comp-card").length > 0) {
+        const select = document.querySelectorAll(".comp-card")
+        select.forEach(comp =>
+            comp.parentNode.removeChild(comp)
+        )
+    } else {
+        console.log("no comp-card")
+    }
+
+}
+
+function countingNode() {
+    let testing = document.querySelectorAll(".comp-card")
+    console.log(testing)
+
+}
 
 //
 const gridButton = document.getElementById("grid-button");
 
-gridButton.addEventListener("click", () => { getdata(weburl) });
+
+gridButton.addEventListener("click", () => {
+    let gridElement = document.getElementById("cards");
+    gridElement.classList.remove('listform')
+    gridElement.classList.add('gridform')
+    clearDataGrid();
+    getDataGrid(weburl);
+
+
+});
+
 
 const listButton = document.getElementById("list-button");
+
+listButton.addEventListener("click", () => {
+    let gridElement = document.getElementById("cards");
+    gridElement.classList.remove('gridform')
+    gridElement.classList.add('listform')
+    clearDataGrid();
+    getDataList(weburl);
+
+});
+

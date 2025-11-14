@@ -1,0 +1,26 @@
+html,
+body {
+    min-height: 100vh;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.navigation li {
+    margin: 5px;
+}
+
+main {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
+
+.comp-card {
+    border: solid;
+    padding: 5px;
+}

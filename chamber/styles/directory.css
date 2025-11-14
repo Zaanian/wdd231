@@ -1,73 +1,27 @@
 html,
 body {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: 1fr;
-
+    min-height: 100vh;
+    margin: 0;
 }
 
-main {
-    
-    grid-row: 2;
-    margin: 5px;
-    border-style: solid;
-}
-
-header {
-    
-    grid-row: 1;
-    margin: 5px;
-    border-style: solid;
-}
-
-footer {
-    
-    grid-row: 3;
-    border-style: solid;
-}
-
-#logo-name {
-    text-align: left;
-}
-
-#menu {
-    display: block;
-    font-size: 2rem;
-    padding: 10px;
-}
-
-#menu::before {
-    content: "☰";
-}
-
-.navigation {
-    list-style: none;
-    margin: 0 auto;
-    max-width: 760px;
-}
-
-.navigation li a:hover {
-    color: blue;
-    text-decoration: overline;
-}
-
-#image-logo {
-    width: 40px;
-    height: 40px;
+ul {
+    list-style-type: none;
 }
 
 .navigation li {
-    display: none;
-}
-
-#menu.show::before {
-    content: "X";
-}
-
-.show li {
-    display: block;
-}
-
-button {
     margin: 5px;
 }
+
+main {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
+
+.comp-card {
+    border: solid;
+    padding: 5px;
+}
+
