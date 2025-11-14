@@ -41,7 +41,7 @@ const cards = document.getElementById("cards")
 const displayCompaniesGrid = (companies) => {
     companies.forEach(company => {
         let card = document.createElement("section");
-        let name = document.createElement("h3")
+        let name = document.createElement("h2")
         let address = document.createElement("p")
         let phones = document.createElement("p")
         let member = document.createElement("p")
@@ -74,7 +74,7 @@ const displayCompaniesGrid = (companies) => {
 const displayCompaniesList = (companies) => {
     companies.forEach(company => {
         let card = document.createElement("section");
-        let name = document.createElement("h3")
+        let name = document.createElement("h2")
         let address = document.createElement("p")
         let phones = document.createElement("p")
         let member = document.createElement("p")
