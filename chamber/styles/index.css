@@ -1,0 +1,54 @@
+html,
+body {
+    min-height: 100vh;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin: 10px;
+}
+
+main {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
+
+
+#logo-name {
+    margin: 10px;
+}
+
+nav {
+    text-align: center;
+
+}
+
+nav ul {
+    padding: 5px;
+}
+
+nav a:hover {
+    color: darkblue;
+    text-decoration: overline;
+    background-color: aqua;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
