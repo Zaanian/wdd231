@@ -31,6 +31,23 @@
         text-align: center;
         grid-row: 2;
         border: solid;
+
+    }
+
+    #contain {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    #events {
+        margin: 10px;
+        border: solid;
+    }
+
+    #weather {
+        margin: 10px;
+        display: grid;
+        grid-template-columns: auto auto;
     }
 
     footer {
@@ -40,6 +57,24 @@
         grid-row: 3;
         border: solid;
     }
+
+    #cards {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    .comp-card {
+        border: solid;
+        margin: 10px;
+    }
+
+    #hero {
+        width: 100%;
+        max-width: 1000px;
+        min-width: 500px;
+        height: auto;
+    }
+
 
 
 

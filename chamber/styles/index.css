@@ -40,7 +40,9 @@ nav a:hover {
     background-color: aqua;
 }
 
-
+#cards {
+    margin: 10px;
+}
 
 
 
