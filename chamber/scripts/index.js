@@ -1,3 +1,5 @@
+
+
 // Set the current year
 document.getElementById("currentyear").textContent = new Date().getFullYear();
 
@@ -15,44 +17,71 @@ hamButton.addEventListener('click', () => {
 });
 
 const weburl = "data/members.json"
+const url = "https://api.openweathermap.org/data/3.0/onecall?lat=47.19&lon=-122.29&units=imperial&appid=70f32d8e36945d218801df44e122e1c2"
+
+const url2 = "https://api.openweathermap.org/data/3.0/onecall?lat=47.19&lon=-122.29&units=imperial&appid=b5cf513fee5b29c16ccd6349eff084ae"
+// API data
+async function getDataApi(url) {
+    const response = await fetch(url);
+    const data = await response.json();
+    let show = data
+    console.log(show)
+    let dataRise = data.daily[0].sunrise
+    let dataFall = data.daily[0].sunset
+    let current_temp = data.current.temp
+
+    let tomTemp = data.daily[0].temp.day
+    let afterTemp = data.daily[1].temp.day
+
+    let sunSet = unixConvert(dataFall);
+    let sunRise = unixConvert(dataRise);
+
+
+    console.log(sunRise)
+    console.log(sunSet)
+
+    console.log(current_temp)
+    console.log(tomTemp)
+    console.log(afterTemp)
+    disForcast(current_temp, tomTemp, afterTemp)
+}
+// Unix time converter
+function unixConvert(data) {
+    const milliseconds = data * 1000;
+    const dateObject = new Date(milliseconds);
+    return dateObject
+}
+
 
 // json data retrival 
 async function getDataGrid(url) {
     const response = await fetch(url);
     const data = await response.json();
-
-    let ranOne = randomNumber();
-    let ranTwo = randomNumber();
-    let ranThree = randomNumber();
-    let num = data.companies;
-    console.log(num);
-    console.log(ranOne);
-    console.log(ranTwo);
-    console.log(ranThree);
-
-    let runOne = data.companies[ranOne];
-    let runTwo = data.companies[ranTwo];
-    let runThree = data.companies[ranThree];
-
-    console.log(runOne);
-    console.log(runTwo);
-    console.log(runThree);
-
-    disCom(runOne);
-    disCom(runTwo);
-    disCom(runThree);
+    let newArray = data.companies.filter(company => company.membershiplevel == 2 || company.membershiplevel == 3);
+    let selected = pickThreeRandom(newArray)
+    console.log(selected)
+    selected.forEach(company => {
+        disCom(company)
+    })
 }
-//
-getDataGrid(weburl)
+//Display weather data
+function disForcast(first, second, third) {
+    document.getElementById("today").textContent = `${first}° F`
+    document.getElementById("tomor").textContent = `${second}° F`
+    document.getElementById("after").textContent = `${third}° F`
+
+}
+
+//Display forecast data
+
+
 // random function
-function randomNumber() {
-    let min = 0
-    let max = 6
-    let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-    return randomNumber
-}
+function pickThreeRandom(arr) {
 
-//
+    const shuffled = [...arr].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, 3);
+}
+//display company spotlight 
 function disCom(company) {
     const cards = document.getElementById("cards")
     let card = document.createElement("section");
@@ -120,4 +149,5 @@ const displayCompaniesGrid = (companies) => {
     });
 }
 
-
+getDataApi(url)
+getDataGrid(weburl)
