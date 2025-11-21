@@ -20,7 +20,7 @@ hamButton.addEventListener('click', () => {
 //
 
 
-const weburl = "chamber/data/members.json"
+const weburl = "data/members.json"
 const url = "https://api.openweathermap.org/data/3.0/onecall?lat=47.19&lon=-122.29&units=imperial&appid=70f32d8e36945d218801df44e122e1c2"
 
 const url2 = "https://api.openweathermap.org/data/3.0/onecall?lat=47.19&lon=-122.29&units=imperial&appid=b5cf513fee5b29c16ccd6349eff084ae"
