@@ -1,5 +1,6 @@
 
 
+
 // Set the current year
 document.getElementById("currentyear").textContent = new Date().getFullYear();
 
@@ -16,7 +17,10 @@ hamButton.addEventListener('click', () => {
     hamButton.classList.toggle('show');
 });
 
-const weburl = "data/members.json"
+//
+
+
+const weburl = "chamber/data/members.json"
 const url = "https://api.openweathermap.org/data/3.0/onecall?lat=47.19&lon=-122.29&units=imperial&appid=70f32d8e36945d218801df44e122e1c2"
 
 const url2 = "https://api.openweathermap.org/data/3.0/onecall?lat=47.19&lon=-122.29&units=imperial&appid=b5cf513fee5b29c16ccd6349eff084ae"
@@ -37,13 +41,8 @@ async function getDataApi(url) {
     let sunRise = unixConvert(dataRise);
 
 
-    console.log(sunRise)
-    console.log(sunSet)
-
-    console.log(current_temp)
-    console.log(tomTemp)
-    console.log(afterTemp)
     disForcast(current_temp, tomTemp, afterTemp)
+    DisWeather(data)
 }
 // Unix time converter
 function unixConvert(data) {
@@ -65,15 +64,41 @@ async function getDataGrid(url) {
     })
 }
 //Display weather data
+function DisWeather(data) {
+
+    const weal = document.getElementById("weather")
+    let min_temp = document.createElement("p")
+    let max_temp = document.createElement("p")
+    let icon = document.createElement("img")
+    let descrypt = document.createElement("p")
+
+    let iconList = `https://openweathermap.org/img/wn/${data.current.weather[0].icon}@2x.png`
+    console.log(data.current.weather[0].icon)
+
+    max_temp.textContent = `Max Temp: ${data.current.temp}° F`
+    min_temp.textContent = `Min Temp: ${data.current.temp}° F`
+    descrypt.textContent = `${data.current.weather[0].description}`
+
+    icon.setAttribute("src", iconList)
+    icon.setAttribute('loading', 'lazy')
+    icon.setAttribute('width', 'auto');
+    icon.setAttribute('height', 'auto');
+
+    weal.appendChild(descrypt)
+    weal.appendChild(icon)
+    weal.appendChild(max_temp)
+    weal.appendChild(min_temp)
+
+
+}
+
+//Display forecast data
 function disForcast(first, second, third) {
     document.getElementById("today").textContent = `${first}° F`
     document.getElementById("tomor").textContent = `${second}° F`
     document.getElementById("after").textContent = `${third}° F`
 
 }
-
-//Display forecast data
-
 
 // random function
 function pickThreeRandom(arr) {
