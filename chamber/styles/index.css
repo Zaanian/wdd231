@@ -8,8 +8,36 @@ ul {
     list-style-type: none;
 }
 
+
+
+#menu::before {
+
+    content: "☰";
+}
+
 li {
-    margin: 10px;
+    display: none;
+
+}
+
+.show {
+    text-align: center;
+}
+
+.show li {
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    display: block;
+}
+
+
+#menu.show::before {
+    content: "X";
+}
+
+#menu {
+    font-size: xx-large;
 }
 
 main {
@@ -43,14 +71,3 @@ nav a:hover {
 #cards {
     margin: 10px;
 }
-
-
-
-
-
-
-
-
-
-
-

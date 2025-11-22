@@ -21,6 +21,10 @@
         flex-direction: row-reverse;
     }
 
+    #menu {
+        display: none;
+    }
+
     #navigation li {
         display: block;
         margin: 10px;
