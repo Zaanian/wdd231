@@ -1,0 +1,78 @@
+html,
+body {
+    min-height: 100vh;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+main {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
+
+.comp-card {
+    border: solid;
+    padding: 5px;
+}
+
+#logo-name {
+    margin: 10px;
+}
+
+nav {
+    text-align: center;
+
+}
+
+nav ul {
+    padding: 5px;
+}
+
+nav a:hover {
+    color: darkblue;
+    text-decoration: overline;
+    background-color: aqua;
+}
+
+#menu::before {
+
+    content: "☰";
+
+}
+
+li {
+    display: none;
+}
+
+#menu.show::before {
+    content: "X";
+}
+
+.show {
+    text-align: center;
+}
+
+.show li {
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    display: block;
+}
+
+
+
+#menu {
+    font-size: xx-large;
+}
+
+button {
+    margin: 10px;
+    height: 40px;
+    width: auto;
+}
