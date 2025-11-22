@@ -42,7 +42,43 @@
         </nav>
     </header>
     <main>
+        <h1>Join</h1>
+        <form>
+            <label for="fname">First Name: </label>
+            <input type="text" required id="fname" name="fname" autocomplete="given-name"><br>
 
+            <label for="lname">Last Name: </label>
+            <input type="text" required id="lname" name="lname" autocomplete="family-name"><br>
+
+            <label for="organization">Organizational Title: </label>
+            <input type="text" id="organization" name="organization" pattern="" autocomplete="organization-title"><br>
+
+            <label for="email">Email Address: </label>
+            <input type="email" required id="email" name="email" autocomplete="email-address"><br>
+
+            <label for="mobile-phone">Mobile Phone Number: </label>
+            <input type="text" required id="mobile-phone" name="mobile-phone"><br>
+
+            <label for="business">Business/Organization: </label>
+            <input type="text" required id="business" name="business" autocomplete="business-organization"><br>
+
+            <label for="mlevel">Membership level: </label>
+            <select id="mlevel" name="mlevel">
+                <option value="non-profit">np</option>
+                <option value="bronze">bronze</option>
+                <option value="silver">silver</option>
+                <option value="gold">gold</option>
+            </select><br>
+
+            <label for="description">Description: </label>
+            <textarea id="description" title="description" name="description" rows="8" cols="20"></textarea><br>
+
+            <label for="time"></label>
+            <input type="hidden" id="time" name="time"><br>
+            <input type="submit">
+
+
+        </form>
     </main>
     <footer>
         <div class="one">
