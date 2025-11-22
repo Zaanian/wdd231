@@ -8,6 +8,10 @@ ul {
     list-style-type: none;
 }
 
+li {
+    margin: 10px;
+}
+
 main {
     text-align: center;
 }
@@ -16,10 +20,6 @@ footer {
     text-align: center;
 }
 
-.comp-card {
-    border: solid;
-    padding: 5px;
-}
 
 #logo-name {
     margin: 10px;
@@ -40,39 +40,11 @@ nav a:hover {
     background-color: aqua;
 }
 
-#menu::before {
-
-    content: "☰";
-
-}
-
-li {
-    display: none;
-}
-
-#menu.show::before {
-    content: "X";
-}
-
-.show {
-    text-align: center;
-}
-
-.show li {
-    margin: 5px;
-    padding: 5px;
-    text-align: center;
-    display: block;
-}
-
-
-
-#menu {
-    font-size: xx-large;
-}
-
-button {
+#cards {
     margin: 10px;
-    height: 40px;
-    width: auto;
 }
+
+
+
+
+
