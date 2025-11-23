@@ -1,0 +1,47 @@
+@media screen and (min-width:480px) {
+
+    html,
+    body {
+
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: 1fr;
+
+    }
+
+
+    header {
+        grid-row: 1;
+    }
+
+
+    ul {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    #navigation li {
+        display: block;
+        margin: 10px;
+    }
+
+    main {
+        border: solid;
+
+
+    }
+
+
+    footer {
+        text-align: center;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-row: 3;
+        border: solid;
+    }
+
+}

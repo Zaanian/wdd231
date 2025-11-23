@@ -14,11 +14,3 @@ hamButton.addEventListener('click', () => {
     hamButton.classList.toggle('show');
 });
 
-
-// modal 
-
-
-
-
-
-//URLparam  GET

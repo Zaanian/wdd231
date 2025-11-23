@@ -43,43 +43,90 @@
     </header>
     <main>
         <h1>Join</h1>
-        <form>
-            <label for="fname">First Name: </label>
-            <input type="text" required id="fname" name="fname" autocomplete="given-name"><br>
+        <section id="sign-up-form">
+            <h2>Sign Up</h2>
+            <form>
+                <label for="fname">First Name: </label>
+                <input type="text" required id="fname" name="fname" autocomplete="given-name"><br>
 
-            <label for="lname">Last Name: </label>
-            <input type="text" required id="lname" name="lname" autocomplete="family-name"><br>
+                <label for="lname">Last Name: </label>
+                <input type="text" required id="lname" name="lname" autocomplete="family-name"><br>
 
-            <label for="organization">Organizational Title: </label>
-            <input type="text" id="organization" name="organization" pattern="" autocomplete="organization-title"><br>
+                <label for="organization">Organizational Title: </label>
+                <input type="text" id="organization" name="organization" pattern=""
+                    autocomplete="organization-title"><br>
 
-            <label for="email">Email Address: </label>
-            <input type="email" required id="email" name="email" autocomplete="email-address"><br>
+                <label for="email">Email Address: </label>
+                <input type="email" required id="email" name="email" autocomplete="email-address"><br>
 
-            <label for="mobile-phone">Mobile Phone Number: </label>
-            <input type="text" required id="mobile-phone" name="mobile-phone"><br>
+                <label for="mobile-phone">Mobile Phone Number: </label>
+                <input type="text" required id="mobile-phone" name="mobile-phone"><br>
 
-            <label for="business">Business/Organization: </label>
-            <input type="text" required id="business" name="business" autocomplete="business-organization"><br>
+                <label for="business">Business/Organization: </label>
+                <input type="text" required id="business" name="business" autocomplete="business-organization"><br>
 
-            <label for="mlevel">Membership level: </label>
-            <select id="mlevel" name="mlevel">
-                <option value="non-profit">np</option>
-                <option value="bronze">bronze</option>
-                <option value="silver">silver</option>
-                <option value="gold">gold</option>
-            </select><br>
+                <label for="mlevel">Membership level: </label>
+                <select id="mlevel" name="mlevel">
+                    <option value="non-profit">NP</option>
+                    <option value="bronze">Bronze</option>
+                    <option value="silver">Silver</option>
+                    <option value="gold">Gold</option>
+                </select><br>
+                <label for="description">Description: </label>
+                <textarea id="description" title="description" name="description" rows="8" cols="20"></textarea><br>
 
-            <label for="description">Description: </label>
-            <textarea id="description" title="description" name="description" rows="8" cols="20"></textarea><br>
+                <label for="time"></label>
+                <input type="hidden" id="time" name="time"><br>
+                <input id="sign-on" type="submit">
+            </form>
+        </section>
 
-            <label for="time"></label>
-            <input type="hidden" id="time" name="time"><br>
-            <input type="submit">
+        <section id="cards">
+            <h2>Info</h2>
+            <div id="contain">
+                <div id="np-in" class="member-cards">
+                    <h2>Non-Profit Membership level</h2>
+                    <button class="button open-button">Learn More</button>
+                </div>
+                <div id="br-in" class="member-cards">
+                    <h2>Bronze Membership level</h2>
+                    <button class="button open-button">Learn More</button>
+                </div>
+                <div id="si-in" class="member-cards">
+                    <h2>Silver Membership level</h2>
+                    <button class="button open-button">Learn More</button>
+                </div>
+                <div id="go-in" class="member-cards">
+                    <h2>Gold Membership level</h2>
+                    <button class="button open-button">Learn More</button>
+                </div>
+            </div>
 
 
-        </form>
+        </section>
+        <dialog class="modal" id="np-info">
+            <h2>Non-Profit</h2>
+            <p>NP Membership is for non profit organizations and there is no fee</p>
+            <button class="button close-button"></button>
+        </dialog>
+        <dialog class="modal" id="bronze-info">
+            <h2>Bronze</h2>
+            <p>Bronze Membership level</p>
+            <button class="button close-button"></button>
+        </dialog>
+        <dialog class="modal" id="silver-info">
+            <h2>Silver</h2>
+            <p>Silver Membership level</p>
+            <button class="button close-button"></button>
+        </dialog>
+        <dialog class="modal" id="gold-info">
+            <h2>Gold</h2>
+            <p>Gold Membership level</p>
+            <button class="button close-button"></button>
+        </dialog>
+
     </main>
+
     <footer>
         <div class="one">
             <p>Puyallup Chamber of Commerce</p>
