@@ -53,7 +53,7 @@
                 <input type="text" required id="lname" name="lname" autocomplete="family-name"><br>
 
                 <label for="organization" title="your title in organization">Organizational Title: </label>
-                <input type="text" id="organization" name="organization" pattern=""
+                <input type="text" id="organization" name="organization" pattern="^[a-zA-Z- ]{7,}$"
                     autocomplete="organization-title"><br>
 
                 <label for="email" title="your email address">Email Address: </label>
@@ -85,19 +85,19 @@
             <div id="contain">
                 <div id="np-in" class="member-cards">
                     <h2>Non-Profit Membership level</h2>
-                    <button class="button open-button">Learn More</button>
+                    <button class="open-button" id="np-open">Learn More</button>
                 </div>
                 <div id="br-in" class="member-cards">
                     <h2>Bronze Membership level</h2>
-                    <button class="button open-button">Learn More</button>
+                    <button class="open-button" id="br-open">Learn More</button>
                 </div>
                 <div id="si-in" class="member-cards">
                     <h2>Silver Membership level</h2>
-                    <button class="button open-button">Learn More</button>
+                    <button class="open-button" id="si-open">Learn More</button>
                 </div>
                 <div id="go-in" class="member-cards">
                     <h2>Gold Membership level</h2>
-                    <button class="button open-button">Learn More</button>
+                    <button class="open-button" id="go-open">Learn More</button>
                 </div>
             </div>
 
@@ -106,22 +106,26 @@
         <dialog class="modal" id="np-info">
             <h2>Non-Profit</h2>
             <p>NP Membership is for non profit organizations and there is no fee</p>
-            <button class="button close-button"></button>
+            <p>Price: free</p>
+            <button class="close-button" id="np-close">close</button>
         </dialog>
         <dialog class="modal" id="bronze-info">
             <h2>Bronze</h2>
             <p>Bronze Membership level</p>
-            <button class="button close-button"></button>
+            <p>Price: $5 per month</p>
+            <button class="close-button" id="br-close">close</button>
         </dialog>
         <dialog class="modal" id="silver-info">
             <h2>Silver</h2>
             <p>Silver Membership level</p>
-            <button class="button close-button"></button>
+            <p>Price: $10 per month</p>
+            <button class="close-button" id="si-close">close</button>
         </dialog>
         <dialog class="modal" id="gold-info">
             <h2>Gold</h2>
-            <p>Gold Membership level</p>
-            <button class="button close-button"></button>
+            <p>Gold Membership level has full benefits.</p>
+            <p>Price: $15 per month</p>
+            <button class="close-button" id="go-close">close</button>
         </dialog>
 
     </main>
