@@ -105,3 +105,85 @@ nav a:hover {
     text-decoration: overline;
     background-color: aqua;
 }
+
+.member-cards {
+
+    margin: 10px;
+    border: solid black;
+    color: white;
+}
+
+#np-in {
+    animation: fadecolorNP 3s ease 60ms infinite alternate;
+}
+
+#br-in {
+    animation: fadecolorBR 3s ease 50ms infinite alternate;
+}
+
+#si-in {
+    animation: fadecolorSI 3s ease 40ms infinite alternate;
+}
+
+#go-in {
+    animation: fadecolorGO 3s ease 30ms infinite alternate;
+}
+
+
+@keyframes fadecolorNP {
+    from {
+        background-color: blue;
+    }
+
+    to {
+        background-color: green;
+    }
+
+}
+
+@keyframes fadecolorBR {
+    from {
+        background-color: green;
+    }
+
+    to {
+        background-color: brown;
+    }
+
+}
+
+@keyframes fadecolorSI {
+    from {
+        background-color: brown;
+    }
+
+    to {
+        background-color: silver;
+    }
+
+}
+
+@keyframes fadecolorGO {
+    from {
+        background-color: silver;
+    }
+
+    to {
+        background-color: gold;
+    }
+
+}
+
+dialog {
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+    padding: 20px;
+}
+
+::backdrop {
+    background-color: rgb(0 0 0 / 50%);
+}
