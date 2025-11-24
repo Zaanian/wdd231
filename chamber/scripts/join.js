@@ -56,12 +56,21 @@ closeGOBtn.addEventListener('click', () => {
     modalGO.close();
 });
 //
+let timing = document.getElementById("time")
+timing.value = getTime()
+console.log(timing.value)
+
+function getTime() {
+    let hours = new Date().getHours()
+    let minutes = new Date().getMinutes()
+    let hidden = `${hours}:${minutes}`
+    return hidden
+
+}
 
 
 
 
-
-//URLparam  GET
 
 
 
