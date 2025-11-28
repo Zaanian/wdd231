@@ -1,0 +1,99 @@
+{
+    "miniatures": [
+        {
+            "name": "Intercessors",
+            "game": "40k",
+            "faction": "Adeptus Astartes"
+        },
+        {
+            "name": "aggressors",
+            "game": "40k",
+            "faction": "Adeptus Astartes"
+        },
+        {
+            "name": "Reivers",
+            "game": "40k",
+            "faction": "Adeptus Astartes"
+        },
+        {
+            "name": "Incursors",
+            "game": "40k",
+            "faction": "Adeptus Astartes"
+        },
+        {
+            "name": "Reivers",
+            "game": "40k",
+            "faction": "Adeptus Astartes"
+        },
+        {
+            "name": "Tactical",
+            "game": "40k",
+            "faction": "Adeptus Astartes"
+        },
+        {
+            "name": "Devastator",
+            "game": "40k",
+            "faction": "Adeptus Astartes"
+        },
+        {
+            "name": "Assault",
+            "game": "40k",
+            "faction": "Adeptus Astartes"
+        },
+        {
+            "name": "Sternguard",
+            "game": "40k",
+            "faction": "Adeptus Astartes"
+        },
+        {
+            "name": "Captain",
+            "game": "40k",
+            "faction": "Adeptus Astartes"
+        },
+        {
+            "name": "Desolation",
+            "game": "40k",
+            "faction": "Adeptus Astartes"
+        },
+        {
+            "name": "Infernus",
+            "game": "40k",
+            "faction": "Adeptus Astartes"
+        },
+        {
+            "name": "Suppressors",
+            "game": "40k",
+            "faction": "Adeptus Astartes"
+        },
+        {
+            "name": "Infiltrators",
+            "game": "40k",
+            "faction": "Adeptus Astartes"
+        },
+        {
+            "name": "Boyz",
+            "game": "40k",
+            "faction": "Orks"
+        },
+        {
+            "name": "Burna Boyz",
+            "game": "40k",
+            "faction": "Orks"
+        },
+        {
+            "name": "Stormboyz",
+            "game": "40k",
+            "faction": "Orks"
+        },
+        {
+            "name": "Lootas",
+            "game": "40k",
+            "faction": "Orks"
+        },
+        {
+            "name": "Nobz",
+            "game": "40k",
+            "faction": "Orks"
+        }
+    ]
+}
