@@ -1,9 +1,11 @@
 header {
+    background-color: darkslategray;
     text-align: center;
     border: solid;
 }
 
 main {
+    background-color: beige;
     text-align: center;
 }
 
@@ -12,7 +14,6 @@ img {
 }
 
 footer {
+    background-color: darkslategrey;
     border: solid;
 }
-
-
