@@ -1,0 +1,7 @@
+@media screen and (min-width:641px) {
+
+    #cards {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}

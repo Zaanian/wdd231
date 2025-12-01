@@ -26,7 +26,7 @@ const displayInterestGrid = (interests) => {
     interests.forEach(interest => {
         let card = document.createElement("section");
         let name = document.createElement("h2")
-        let address = document.createElement("p")
+        let address = document.createElement("em")
         let description = document.createElement("p")
         let img = document.createElement("img")
 
@@ -38,8 +38,6 @@ const displayInterestGrid = (interests) => {
         img.setAttribute("src", interest.image)
         img.setAttribute('alt', `image of ${interest.name}`)
         img.setAttribute('loading', 'lazy')
-        img.setAttribute('width', 'auto');
-        img.setAttribute('height', 'auto');
 
         card.appendChild(name)
         card.appendChild(address)
