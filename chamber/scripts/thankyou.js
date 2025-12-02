@@ -19,7 +19,7 @@ const params = new URLSearchParams(window.location.search)
 
 function submitDataShow(data) {
     const firstname = data.get("fname")
-    const lastname = data.get("fname")
+    const lastname = data.get("lname")
 
     const email = data.get("email")
     const phone = data.get("mobile-phone")
