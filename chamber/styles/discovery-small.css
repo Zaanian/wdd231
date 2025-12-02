@@ -64,9 +64,9 @@ nav ul {
 }
 
 nav a:hover {
-    color: darkblue;
+    color: #b270f0;
     text-decoration: overline;
-    background-color: aqua;
+    background-color: #012323;
 }
 
 #menu::before {
