@@ -3,4 +3,35 @@
         display: grid;
         grid-template-columns: auto auto auto;
     }
+
+    html,
+    body {
+
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: 1fr;
+
+    }
+
+
+    header {
+        grid-row: 1;
+        border: solid;
+    }
+
+
+    main {
+        text-align: center;
+        grid-row: 2;
+        border: solid;
+    }
+
+    footer {
+        text-align: center;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-row: 3;
+        border: solid;
+    }
+
 }

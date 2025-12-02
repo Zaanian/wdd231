@@ -4,4 +4,18 @@
         display: grid;
         grid-template-columns: auto auto;
     }
+
+    #menu {
+        display: none;
+    }
+
+    #navigation li {
+        display: block;
+        margin: 10px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row-reverse;
+    }
 }
