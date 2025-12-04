@@ -15,12 +15,10 @@ hamButton.addEventListener('click', () => {
     hamButton.classList.toggle('show');
 });
 
-//
+//retrieve external data
 import { places } from '../data/interest.mjs'
-console.log(places.interest)
 
-
-//
+//display places of interests cards
 const cards = document.getElementById("cards");
 const displayInterestGrid = (interests) => {
     interests.forEach(interest => {
@@ -50,4 +48,40 @@ const displayInterestGrid = (interests) => {
     });
 }
 
+// save current date
+function saveCurrentDate() {
+    const now = new Date();
+    localStorage.setItem('lastVisitTimestamp', now.getTime());
+}
+//check time since last visit
+function checkTimeSinceLastVisit() {
+    const lastDateElement = document.getElementById('lastDate')
+    const lastVisitTimestamp = localStorage.getItem('lastVisitTimestamp');
+
+    if (lastVisitTimestamp) {
+        // convert string into number and get current date
+        const lastVisitTime = parseInt(lastVisitTimestamp, 10);
+        const currentTime = new Date().getTime();
+        // difference between two dates
+        const difference = currentTime - lastVisitTime;
+
+        const daysPassed = Math.floor(difference / (1000 * 60 * 60 * 24));
+        //display result
+        if (daysPassed == 1) {
+            lastDateElement.textContent = `You last visited ${daysPassed} day ago.`
+        } else if (daysPassed > 1) {
+            lastDateElement.textContent = `You last visited ${daysPassed} days ago.`
+        } else {
+            lastDateElement.textContent = `Back so soon! Awesome`
+        }
+
+    } else {
+        lastDateElement.textContent = 'Welcome! Let us know if you have any questions.'
+
+        saveCurrentDate()
+    }
+}
+checkTimeSinceLastVisit()
 displayInterestGrid(places.interest)
+
+

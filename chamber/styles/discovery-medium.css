@@ -1,5 +1,10 @@
 @media screen and (min-width:641px) {
 
+    #lastDate {
+        display: block;
+        text-align: center;
+    }
+
     #cards {
         display: grid;
         grid-template-columns: auto auto;

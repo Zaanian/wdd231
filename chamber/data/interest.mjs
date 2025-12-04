@@ -46,7 +46,7 @@ export const places = {
             "name": "Chihuly Garden and Glass",
             "address": "305 Harrison St, Seattle, WA 98109",
             "description": "Located in Seattle, this museum showcases the vibrant and intricate glass art of Dale Chihuly. ",
-            "image": "images/chihuly-size.webp"
+            "image": "images/chihuly-garden-glass-2.webp"
         }
     ]
 }
