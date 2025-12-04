@@ -11,11 +11,6 @@
             "faction": "Adeptus Astartes"
         },
         {
-            "name": "Reivers",
-            "game": "40k",
-            "faction": "Adeptus Astartes"
-        },
-        {
             "name": "Incursors",
             "game": "40k",
             "faction": "Adeptus Astartes"
@@ -71,6 +66,11 @@
             "faction": "Adeptus Astartes"
         },
         {
+            "name": "Inceptors",
+            "game": "40k",
+            "faction": "Adeptus Astartes"
+        },
+        {
             "name": "Boyz",
             "game": "40k",
             "faction": "Orks"
@@ -94,6 +94,11 @@
             "name": "Nobz",
             "game": "40k",
             "faction": "Orks"
+        },
+        {
+            "name": "Warboss",
+            "game": "40k",
+            "faction": "Adeptus Astartes"
         }
     ]
 }

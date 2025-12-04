@@ -1,0 +1,19 @@
+header {
+    background-color: darkslategray;
+    text-align: center;
+    border: solid;
+}
+
+main {
+    background-color: beige;
+    text-align: center;
+}
+
+img {
+    border: solid;
+}
+
+footer {
+    background-color: darkslategrey;
+    border: solid;
+}
