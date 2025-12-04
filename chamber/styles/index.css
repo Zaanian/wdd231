@@ -8,6 +8,9 @@ ul {
     list-style-type: none;
 }
 
+ul li a {
+    font-size: larger;
+}
 
 
 #menu::before {

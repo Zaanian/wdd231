@@ -8,6 +8,10 @@ ul {
     list-style-type: none;
 }
 
+ul li a {
+    font-size: larger;
+}
+
 main {
     text-align: center;
 }
@@ -37,7 +41,7 @@ nav ul {
 nav a:hover {
     color: darkblue;
     text-decoration: overline;
-    background-color:aqua;
+    background-color: aqua;
 }
 
 #menu::before {

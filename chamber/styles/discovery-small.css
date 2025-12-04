@@ -8,6 +8,11 @@ ul {
     list-style-type: none;
 }
 
+ul li a {
+    font-size: larger;
+}
+
+
 main {
     text-align: center;
 }
