@@ -25,16 +25,18 @@ const displayInventoryGrid = (minis) => {
         let card = document.createElement("section");
         let name = document.createElement("h2")
         let game = document.createElement("p")
+        let faction = document.createElement("p")
 
 
         card.classList.add("comp-cards")
         name.textContent = `${mini.name}`
         game.textContent = `${mini.game}`
-
+        faction.textContent = `${mini.faction}`
 
 
         card.appendChild(name)
         card.appendChild(game)
+        card.appendChild(faction)
 
         cards.appendChild(card)
 

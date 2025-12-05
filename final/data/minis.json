@@ -3,102 +3,122 @@
         {
             "name": "Intercessors",
             "game": "40k",
-            "faction": "Adeptus Astartes"
+            "faction": "Adeptus Astartes",
+            "image": "images/products/Intercessors01.webp"
         },
         {
             "name": "aggressors",
             "game": "40k",
-            "faction": "Adeptus Astartes"
+            "faction": "Adeptus Astartes",
+            "image": "images/products/Aggressors01.webp"
         },
         {
             "name": "Incursors",
             "game": "40k",
-            "faction": "Adeptus Astartes"
+            "faction": "Adeptus Astartes",
+            "image": "images/products/Incursors01.webp"
         },
         {
             "name": "Reivers",
             "game": "40k",
-            "faction": "Adeptus Astartes"
+            "faction": "Adeptus Astartes",
+            "image": "images/products/Rievers01.webp"
         },
         {
             "name": "Tactical",
             "game": "40k",
-            "faction": "Adeptus Astartes"
+            "faction": "Adeptus Astartes",
+            "image": "images/products/tactical01.webp"
         },
         {
             "name": "Devastator",
             "game": "40k",
-            "faction": "Adeptus Astartes"
+            "faction": "Adeptus Astartes",
+            "image": "images/products/01.webp"
         },
         {
             "name": "Assault",
             "game": "40k",
-            "faction": "Adeptus Astartes"
+            "faction": "Adeptus Astartes",
+            "image": "images/products/Intercessors01.webp"
         },
         {
             "name": "Sternguard",
             "game": "40k",
-            "faction": "Adeptus Astartes"
+            "faction": "Adeptus Astartes",
+            "image": "images/products/Intercessors01.webp"
         },
         {
             "name": "Captain",
             "game": "40k",
-            "faction": "Adeptus Astartes"
+            "faction": "Adeptus Astartes",
+            "image": "images/products/Intercessors01.webp"
         },
         {
             "name": "Desolation",
             "game": "40k",
-            "faction": "Adeptus Astartes"
+            "faction": "Adeptus Astartes",
+            "image": "images/products/Intercessors01.webp"
         },
         {
             "name": "Infernus",
             "game": "40k",
-            "faction": "Adeptus Astartes"
+            "faction": "Adeptus Astartes",
+            "image": "images/products/Intercessors01.webp"
         },
         {
             "name": "Suppressors",
             "game": "40k",
-            "faction": "Adeptus Astartes"
+            "faction": "Adeptus Astartes",
+            "image": "images/products/Intercessors01.webp"
         },
         {
             "name": "Infiltrators",
             "game": "40k",
-            "faction": "Adeptus Astartes"
+            "faction": "Adeptus Astartes",
+            "image": "images/products/Intercessors01.webp"
         },
         {
             "name": "Inceptors",
             "game": "40k",
-            "faction": "Adeptus Astartes"
+            "faction": "Adeptus Astartes",
+            "image": "images/products/Intercessors01.webp"
         },
         {
             "name": "Boyz",
             "game": "40k",
-            "faction": "Orks"
+            "faction": "Orks",
+            "image": "images/products/Intercessors01.webp"
         },
         {
             "name": "Burna Boyz",
             "game": "40k",
-            "faction": "Orks"
+            "faction": "Orks",
+            "image": "images/products/Intercessors01.webp"
         },
         {
             "name": "Stormboyz",
             "game": "40k",
-            "faction": "Orks"
+            "faction": "Orks",
+            "image": "images/products/Intercessors01.webp"
         },
         {
             "name": "Lootas",
             "game": "40k",
-            "faction": "Orks"
+            "faction": "Orks",
+            "image": "images/products/Intercessors01.webp"
         },
         {
             "name": "Nobz",
             "game": "40k",
-            "faction": "Orks"
+            "faction": "Orks",
+            "image": "images/products/Intercessors01.webp"
         },
         {
             "name": "Warboss",
             "game": "40k",
-            "faction": "Adeptus Astartes"
+            "faction": "Adeptus Astartes",
+            "image": "images/products/Intercessors01.webp"
         }
     ]
 }
