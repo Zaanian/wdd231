@@ -1,7 +1,21 @@
+html,
+body {
+    min-height: 100vh;
+    margin: 0;
+}
+
 header {
     background-color: #528484;
     text-align: center;
     border: solid;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li a {
+    font-size: larger;
 }
 
 main {
@@ -16,4 +30,50 @@ img {
 footer {
     background-color: #528484;
     border: solid;
+}
+
+nav {
+    text-align: center;
+
+}
+
+nav ul {
+    padding: 5px;
+}
+
+nav a:hover {
+    color: darkblue;
+    text-decoration: overline;
+    background-color: aqua;
+}
+
+#menu::before {
+
+    content: "☰";
+
+}
+
+li {
+    display: none;
+}
+
+#menu.show::before {
+    content: "X";
+}
+
+.show {
+    text-align: center;
+}
+
+.show li {
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    display: block;
+}
+
+
+
+#menu {
+    font-size: xx-large;
 }
