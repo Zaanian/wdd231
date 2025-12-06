@@ -25,7 +25,8 @@ const displayInventoryGrid = (minis) => {
         let card = document.createElement("section");
         let name = document.createElement("h2")
         let game = document.createElement("p")
-        let faction = document.createElement("p")
+        let faction = document.createElement("em")
+        let photo = document.createElement("img")
 
 
         card.classList.add("comp-cards")
@@ -33,10 +34,15 @@ const displayInventoryGrid = (minis) => {
         game.textContent = `${mini.game}`
         faction.textContent = `${mini.faction}`
 
+        photo.setAttribute("src", mini.image)
+        photo.setAttribute('alt', `image of ${mini.name}`)
+        photo.setAttribute('loading', 'lazy')
+
 
         card.appendChild(name)
         card.appendChild(game)
         card.appendChild(faction)
+        card.appendChild(photo)
 
         cards.appendChild(card)
 
