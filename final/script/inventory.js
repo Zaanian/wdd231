@@ -27,12 +27,14 @@ const displayInventoryGrid = (minis) => {
         let game = document.createElement("p")
         let faction = document.createElement("em")
         let photo = document.createElement("img")
+        let button = document.createElement("button")
 
 
         card.classList.add("comp-cards")
         name.textContent = `${mini.name}`
         game.textContent = `${mini.game}`
         faction.textContent = `${mini.faction}`
+        button.textContent = `Details`
 
         photo.setAttribute("src", mini.image)
         photo.setAttribute('alt', `image of ${mini.name}`)
@@ -43,6 +45,7 @@ const displayInventoryGrid = (minis) => {
         card.appendChild(game)
         card.appendChild(faction)
         card.appendChild(photo)
+        card.appendChild(button)
 
         cards.appendChild(card)
 

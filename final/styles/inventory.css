@@ -20,12 +20,11 @@ ul li a {
 
 main {
     background-color: beige;
+    text-align: center;
 
 }
 
-img {
-    border: solid;
-}
+
 
 footer {
     background-color: #528484;
@@ -72,7 +71,12 @@ li {
     display: block;
 }
 
+#cards {
+    margin: 10px;
+}
+
 .comp-cards {
+    margin: 10px;
     border: solid;
     display: grid;
     grid-template-areas:
@@ -80,7 +84,7 @@ li {
         "image"
         "game"
         "faction";
-    text-align: center;
+
 }
 
 .comp-cards h2 {
@@ -89,6 +93,7 @@ li {
 
 .comp-cards img {
     grid-area: image;
+    width: 100%;
 
 }
 
@@ -98,6 +103,10 @@ li {
 
 .comp-cards em {
     grid-area: faction;
+}
+
+button {
+    margin: 5px;
 }
 
 #menu {
