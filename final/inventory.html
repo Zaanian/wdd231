@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="styles/inventory-medium.css">
     <link rel="stylesheet" href="styles/inventory-large.css">
 
+
     <title>Inventory Page</title>
 </head>
 
@@ -31,13 +32,16 @@
                 <li><a href="checkout.html">Something</a></li>
             </ul>
         </nav>
-        <div></div>
+        <div id="cart"></div>
     </header>
     <main>
         <h1>Inventory</h1>
         <div id="cards"></div>
 
-        <dialog id="minis-details"></dialog>
+        <dialog id="cart-details">
+            <h2></h2>
+            <p></p>
+        </dialog>
 
     </main>
     <footer>
@@ -52,5 +56,6 @@
 </body>
 
 <script src="script/inventory.js" type="module"></script>
+<script src="script/checkout.js" type="module"></script>
 
 </html>

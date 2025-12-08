@@ -28,13 +28,21 @@ const displayInventoryGrid = (minis) => {
         let faction = document.createElement("em")
         let photo = document.createElement("img")
         let button = document.createElement("button")
+        let cartButton = document.createElement("button")
 
 
         card.classList.add("comp-cards")
+        cartButton.id = `${mini.name}`
+
         name.textContent = `${mini.name}`
         game.textContent = `${mini.game}`
         faction.textContent = `${mini.faction}`
         button.textContent = `Details`
+        cartButton.textContent = `Add to Cart`
+
+        button.setAttribute("type", 'button')
+        cartButton.setAttribute("type", 'button')
+
 
         photo.setAttribute("src", mini.image)
         photo.setAttribute('alt', `image of ${mini.name}`)
@@ -46,6 +54,7 @@ const displayInventoryGrid = (minis) => {
         card.appendChild(faction)
         card.appendChild(photo)
         card.appendChild(button)
+        card.appendChild(cartButton)
 
         cards.appendChild(card)
 
@@ -54,3 +63,24 @@ const displayInventoryGrid = (minis) => {
 }
 
 displayInventoryGrid(miniatures.miniatures)
+
+// cart functions
+//
+function settCart() {
+    const shoppingCart = localStorage.setItem("mini", "name")
+}
+
+function checkCartUp() {
+    const shoppingCart = localStorage.getItem("mini")
+    if (shoppingCart) {
+        console.log("shop cart set.")
+
+    } else {
+        console.log("Shop cart not set. Please reload page.")
+        settCart()
+    }
+}
+//
+
+
+
