@@ -32,7 +32,8 @@ const displayInventoryGrid = (minis) => {
 
 
         card.classList.add("comp-cards")
-        cartButton.id = `${mini.name}`
+        cartButton.classList.add("myButtons")
+
 
         name.textContent = `${mini.name}`
         game.textContent = `${mini.game}`
@@ -42,6 +43,7 @@ const displayInventoryGrid = (minis) => {
 
         button.setAttribute("type", 'button')
         cartButton.setAttribute("type", 'button')
+        cartButton.setAttribute("data-button-id", `${mini.name}`)
 
 
         photo.setAttribute("src", mini.image)
@@ -82,5 +84,38 @@ function checkCartUp() {
 }
 //
 
+
+function addToCart() {
+    count++
+    console.log(`Counting: ${count}`)
+
+
+}
+
+const shopping = []
+
+const allbutton = document.querySelectorAll(".myButtons")
+allbutton.forEach(button => {
+    button.addEventListener('click', (event) => {
+        //
+        const buttonId = event.target.getAttribute('data-button-id');
+        console.log(`Button ${buttonId} was clicked!`);
+        shopping.push(buttonId)
+        console.log(shopping)
+
+    });
+});
+
+
+
+console.log(allbutton)
+
+
+//
+function removeFromCart() {
+
+}
+//
+checkCartUp()
 
 
