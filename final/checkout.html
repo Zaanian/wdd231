@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Stephen Stauffer">
-    <meta name="description" content="This is the third page for the wargame miniature website.">
-    <meta property="og:title" content="Third page" />
-    <meta property="og:description"
-        content="This is the directory page for businesses for the Puyallup, Chamber of Commerce website." />
+    <meta name="description" content="This is the checkout page for the wargame miniature website.">
+    <meta property="og:title" content="checkout page" />
+    <meta property="og:description" content="This is the checkout page for the wargame miniature website." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,8 +15,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/index-large.css">
-    <script src="script/index.js" defer></script>
-    <title>Third Page</title>
+    <script src="script/checkout.js" defer></script>
+    <title>checkout Page</title>
 </head>
 
 <body>
@@ -34,8 +33,41 @@
     </header>
     <main>
         <h1>checkout</h1>
+        <form method="get" action="thank-you.html">
+            <label for="fname">First Name: </label>
+            <input type="text" required id="fname" name="fname" autocomplete="given-name" title="given name"><br>
 
-        <div id="list"></div>
+            <label for="lname">Last Name: </label>
+            <input type="text" required id="lname" name="lname" autocomplete="family-name" title="family name"><br>
+
+            <label for="email">Email Address: </label>
+            <input type="email" required id="email" name="email" placeholder="victory@gmail.com" autocomplete="email"
+                title="your email address"><br>
+
+            <label for="mobile-phone">Mobile Phone Number: </label>
+            <input type="tel" required id="mobile-phone" name="mobile-phone" autocomplete="tel"
+                title="phone number"><br>
+
+            <label for="address">Billing Address: </label>
+            <input type="text" required id="address" name="address"><br>
+
+            <label for="country">Country </label>
+            <input type="text" required id="country" name="country"><br>
+
+            <label for="state">State/Province </label>
+            <input type="text" required id="state" name="state"><br>
+
+            <label for="city">City </label>
+            <input type="text" required id="city" name="city"><br>
+
+            <label for="zip">Zip or Postal Code </label>
+            <input type="text" required id="zip" name="zip"><br>
+
+            
+
+        </form>
+
+
 
     </main>
     <footer>
