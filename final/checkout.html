@@ -8,25 +8,30 @@
     <meta name="description" content="This is the checkout page for the wargame miniature website.">
     <meta property="og:title" content="checkout page" />
     <meta property="og:description" content="This is the checkout page for the wargame miniature website." />
+
+    <meta property="og:image" content="https://Zaanian.github.io/wdd231/final/images/favicon.ico">
+    <meta property="og:url" content="https://Zaanian.github.io/wdd231/final/checkout.html">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/index-large.css">
+    <link rel="stylesheet" href="styles/checkout.css">
+    <link rel="stylesheet" href="styles/checkout-large.css">
     <script src="script/checkout.js" defer></script>
     <title>checkout Page</title>
 </head>
 
 <body>
     <header>
+        <img id="image-logo" src="images/favicon.ico" alt="logo-image">
         <nav>
             <a id="menu" href="#"></a>
             <ul id="navigation">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="inventory.html">Store</a></li>
-                <li><a href="checkout.html">Something</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
             </ul>
         </nav>
         <div id="cart"></div>
@@ -34,36 +39,52 @@
     <main>
         <h1>checkout</h1>
         <form method="get" action="thank-you.html">
-            <label for="fname">First Name: </label>
-            <input type="text" required id="fname" name="fname" autocomplete="given-name" title="given name"><br>
+            <fieldset id="billing">
+                <legend>Billing Information</legend>
 
-            <label for="lname">Last Name: </label>
-            <input type="text" required id="lname" name="lname" autocomplete="family-name" title="family name"><br>
+                <label for="fname">First Name: </label>
+                <input type="text" required id="fname" name="fname" autocomplete="given-name" title="given name"><br>
 
-            <label for="email">Email Address: </label>
-            <input type="email" required id="email" name="email" placeholder="victory@gmail.com" autocomplete="email"
-                title="your email address"><br>
+                <label for="lname">Last Name: </label>
+                <input type="text" required id="lname" name="lname" autocomplete="family-name" title="family name"><br>
 
-            <label for="mobile-phone">Mobile Phone Number: </label>
-            <input type="tel" required id="mobile-phone" name="mobile-phone" autocomplete="tel"
-                title="phone number"><br>
+                <label for="email">Email Address: </label>
+                <input type="email" required id="email" name="email" placeholder="victory@gmail.com"
+                    autocomplete="email" title="your email address"><br>
 
-            <label for="address">Billing Address: </label>
-            <input type="text" required id="address" name="address"><br>
+                <label for="mobile-phone">Mobile Phone Number: </label>
+                <input type="tel" required id="mobile-phone" name="mobile-phone" autocomplete="tel"
+                    title="phone number"><br>
 
-            <label for="country">Country </label>
-            <input type="text" required id="country" name="country"><br>
+                <label for="address">Billing Address: </label>
+                <input type="text" required id="address" name="address"><br>
 
-            <label for="state">State/Province </label>
-            <input type="text" required id="state" name="state"><br>
+                <label for="country">Country: </label>
+                <input type="text" required id="country" name="country"><br>
 
-            <label for="city">City </label>
-            <input type="text" required id="city" name="city"><br>
+                <label for="state">State/Province: </label>
+                <input type="text" required id="state" name="state"><br>
 
-            <label for="zip">Zip or Postal Code </label>
-            <input type="text" required id="zip" name="zip"><br>
+                <label for="city">City: </label>
+                <input type="text" required id="city" name="city"><br>
 
-            
+                <label for="zip">Zip or Postal Code: </label>
+                <input type="text" required id="zip" name="zip"><br>
+            </fieldset>
+            <fieldset id="payment">
+                <legend>Payment Information</legend>
+                <label for="card-number">Card Number: </label>
+                <input type="text" required id="card-number" name="card-number"><br>
+
+                <label for="month">expiration date month: </label>
+                <input type="text" required id="month" name="month"><br>
+
+                <label for="year">expiration date year: </label>
+                <input type="text" required id="year" name="year"><br>
+
+                <label for="secure-code">security code: </label>
+                <input type="text" reqired id="secure-code" name="secure-code"><br>
+            </fieldset>
 
         </form>
 
