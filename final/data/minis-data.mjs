@@ -14,6 +14,22 @@ export const miniatures = {
             "image": "images/products/Aggressors01.webp",
             "value": "5"
         },
+
+        {
+            "name": "Assault Terminators",
+            "game": "40k",
+            "faction": "Adeptus Astartes",
+            "image": "images/products/Aggressors01.webp",
+            "value": "5"
+        },
+        {
+            "name": "Terminators",
+            "game": "40k",
+            "faction": "Adeptus Astartes",
+            "image": "images/products/Aggressors01.webp",
+            "value": "5"
+        },
+
         {
             "name": "Incursors",
             "game": "40k",
