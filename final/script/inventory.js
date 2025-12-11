@@ -19,6 +19,8 @@ hamButton.addEventListener('click', () => {
 
 import { miniatures } from "../data/minis-data.mjs";
 
+
+
 //
 const cards = document.getElementById("cards");
 const displayInventoryGrid = (minis) => {
@@ -84,13 +86,6 @@ function checkCartUp() {
 }
 //
 
-
-function addToCart() {
-    count++
-    console.log(`Counting: ${count}`)
-
-
-}
 //
 const shopping = []
 localStorage.setItem("cart", "name")
@@ -114,28 +109,40 @@ allbutton.forEach(button => {
 //
 
 function cartContents() {
-    const carting = document.getElementById("detail-cart")
-    
+    const data = miniatures.miniatures
 
+    const carting = document.getElementById("detail-cart")
     const myArr = JSON.parse(localStorage.getItem("cart"))
     console.log(myArr)
+    console.log(data)
+
+
+
+
+
 
     myArr.forEach((mini, index) => {
         console.log(`Name: ${mini} position: ${index}`)
         let name = document.createElement("p")
 
-        name.textContent = `Name: ${mini}`
+
+        const users = data.filter(array => array.name === mini)
+        console.log(users)
+        const third = data.at(0)
+        console.log(third)
+
+        name.textContent = `Name: ${mini}, Value: ${third.value}`
         carting.appendChild(name)
+
     })
+}
+const arrayDisplay = (minis) => {
+    minis.forEach(mini => {
+        console.log(`Name: ${mini.name}, Value: ${mini.value}`)
 
-
+    })
 }
 
-const names = ['John', 'Jane', 'Jim'];
-
-names.forEach((name, index) => {
-    console.log(`${name} is at position ${index}`);
-});
 
 
 //modal
@@ -155,14 +162,8 @@ closeDialogBtn.addEventListener('click', () => {
 
 
 console.log(localStorage)
-
-
-
-
 //
-function removeFromCart() {
 
-}
 //
 checkCartUp()
 
