@@ -30,14 +30,18 @@ function submitDataShow(data) {
     let name = document.createElement("p")
     let disEmail = document.createElement("p")
     let disPhone = document.createElement("p")
+    let message = document.createElement("em")
 
     name.textContent = `Name: ${firstname} ${lastname}`
     disEmail.textContent = `Email: ${email}`
     disPhone.textContent = `Mobile Phone Number: ${phone}`
 
+    message.textContent = `Thank you for your purchase!`
+
     display.appendChild(name)
     display.appendChild(disEmail)
     display.appendChild(disPhone)
+    display.appendChild(message)
 }
 //
 // cart functions
