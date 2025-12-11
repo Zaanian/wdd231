@@ -26,7 +26,6 @@ async function fetchData() {
         }
 
         const data = await response.json();
-        console.log(data)
         displayNew(data)
         return data;
     } catch (error) {
@@ -37,7 +36,7 @@ async function fetchData() {
 
 //Index functions
 function displayNew(data) {
-    console.log(data)
+
     const card = document.getElementById("newModel")
     const dataArray = data.miniatures
 
