@@ -115,35 +115,40 @@ function cartContents() {
     const myArr = JSON.parse(localStorage.getItem("cart"))
     console.log(myArr)
     console.log(data)
+    let amount = document.createElement("p")
+    amount.textContent = `Number of Items: ${myArr.length}`
+    carting.appendChild(amount)
 
 
 
-
-
-
-    myArr.forEach((mini, index) => {
-        console.log(`Name: ${mini} position: ${index}`)
-        let name = document.createElement("p")
+    const arrayhold = []
+    myArr.forEach((mini) => {
+        console.log(`Name: ${mini}`)
+        let title = document.createElement("p")
 
 
         const users = data.filter(array => array.name === mini)
         console.log(users)
-        const third = data.at(0)
+
+        const third = users[0]
         console.log(third)
+        console.log(third.value)
 
-        name.textContent = `Name: ${mini}, Value: ${third.value}`
-        carting.appendChild(name)
+        title.textContent = `Name: ${mini}, Value: ${third.value}`
+        carting.appendChild(title)
 
-    })
-}
-const arrayDisplay = (minis) => {
-    minis.forEach(mini => {
-        console.log(`Name: ${mini.name}, Value: ${mini.value}`)
+        arrayhold.push(third.value)
 
     })
+    console.log(arrayhold)
+    let sumtotal = document.createElement("p")
+    const sum = arrayhold.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+    sumtotal.textContent = `Total: ${sum}`
+    carting.appendChild(sumtotal)
+    console.log(sum);
+
 }
-
-
 
 //modal
 const openDialogBtn = document.getElementById('showCart');
