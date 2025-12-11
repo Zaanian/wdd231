@@ -30,7 +30,6 @@ const displayInventoryGrid = (minis) => {
         let game = document.createElement("p")
         let faction = document.createElement("em")
         let photo = document.createElement("img")
-
         let cartButton = document.createElement("button")
 
 
@@ -43,7 +42,6 @@ const displayInventoryGrid = (minis) => {
         faction.textContent = `${mini.faction}`
 
         cartButton.textContent = `Add to Cart`
-
 
         cartButton.setAttribute("type", 'button')
         cartButton.setAttribute("data-button-id", `${mini.name}`)

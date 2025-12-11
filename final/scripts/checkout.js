@@ -14,8 +14,9 @@ hamButton.addEventListener('click', () => {
     mainnav.classList.toggle('show');
     hamButton.classList.toggle('show');
 });
-
+//
 import { miniatures } from "../data/minis-data.mjs";
+//checkout functions
 const url = "data/minis.json"
 async function fetchData() {
     try {
@@ -34,15 +35,12 @@ async function fetchData() {
         return null;
     }
 }
-
-//checkout functions
+//
 const cards = document.getElementById("displayCartScreen");
 function displayCartScreen(data) {
     if (localStorage.getItem("cart")) {
         const cartData = JSON.parse(localStorage.getItem("cart"))
-        console.log(cartData)
         const data2 = data
-        console.log(data2)
         const arrayhold2 = []
         cartData.forEach((mini) => {
 

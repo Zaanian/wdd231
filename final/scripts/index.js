@@ -13,8 +13,48 @@ hamButton.addEventListener('click', () => {
     mainnav.classList.toggle('show');
     hamButton.classList.toggle('show');
 });
+
 //
 import { miniatures } from "../data/minis-data.mjs";
+const url = "data/minis.json"
+async function fetchData() {
+    try {
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log(data)
+        displayNew(data)
+        return data;
+    } catch (error) {
+        console.error('Fetch error:', error.message);
+        return null;
+    }
+}
+
+//Index functions
+function displayNew(data) {
+    console.log(data)
+    const card = document.getElementById("newModel")
+    const dataArray = data.miniatures
+
+    let itemName = document.createElement("h3")
+    let itemphoto = document.createElement("img")
+
+    itemName.textContent = `${dataArray[3].name}`
+
+    itemphoto.setAttribute("src", dataArray[3].image)
+    itemphoto.setAttribute('alt', `image of ${dataArray[3].name}`)
+    itemphoto.setAttribute('loading', 'lazy')
+
+    card.appendChild(itemName)
+    card.appendChild(itemphoto)
+
+}
+
 // cart functions
 function settCart() {
     localStorage.setItem("cart", "name")
@@ -121,3 +161,4 @@ closeDialogBtn.addEventListener('click', () => {
 //
 checkCartUp()
 
+fetchData()
