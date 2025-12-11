@@ -159,16 +159,4 @@ export const miniatures = {
     ]
 }
 
-export async function fetchData() {
-    try {
-        const response = await fetch('data/minis.json')
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-    } catch (error) {
-        // Catches errors from either the fetch or the response.json() call
-        console.error('Fetch error:', error.message);
-        return null;
-    }
-}
 
