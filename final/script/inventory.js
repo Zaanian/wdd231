@@ -71,16 +71,14 @@ displayInventoryGrid(miniatures.miniatures)
 // cart functions
 //
 function settCart() {
-    const shoppingCart = localStorage.setItem("mini", "name")
+    localStorage.setItem("cart", "name")
 }
 
 function checkCartUp() {
-    const shoppingCart = localStorage.getItem("mini")
+    const shoppingCart = localStorage.getItem("cart")
     if (shoppingCart) {
         console.log("shop cart set.")
-
     } else {
-        console.log("Shop cart not set. Please reload page.")
         settCart()
     }
 }
@@ -88,8 +86,6 @@ function checkCartUp() {
 
 //
 const shopping = []
-localStorage.setItem("cart", "name")
-
 const allbutton = document.querySelectorAll(".myButtons")
 allbutton.forEach(button => {
     button.addEventListener('click', (event) => {
@@ -112,41 +108,51 @@ function cartContents() {
     const data = miniatures.miniatures
 
     const carting = document.getElementById("detail-cart")
-    const myArr = JSON.parse(localStorage.getItem("cart"))
-    console.log(myArr)
-    console.log(data)
-    let amount = document.createElement("p")
-    amount.textContent = `Number of Items: ${myArr.length}`
-    carting.appendChild(amount)
+
+    if (localStorage.getItem("cart") === "name") {
+        console.log(`error `)
+        localStorage.clear()
+
+    } else if (!localStorage.getItem("cart")) {
+        console.log(`second error`)
+
+    } else {
+        const myArr = JSON.parse(localStorage.getItem("cart"))
+        console.log(myArr)
+        console.log(data)
+        let amount = document.createElement("p")
+        amount.textContent = `Number of Items: ${myArr.length}`
+        carting.appendChild(amount)
 
 
 
-    const arrayhold = []
-    myArr.forEach((mini) => {
-        console.log(`Name: ${mini}`)
-        let title = document.createElement("p")
+        const arrayhold = []
+        myArr.forEach((mini) => {
+            console.log(`Name: ${mini}`)
+            let title = document.createElement("p")
 
 
-        const users = data.filter(array => array.name === mini)
-        console.log(users)
+            const users = data.filter(array => array.name === mini)
+            console.log(users)
 
-        const third = users[0]
-        console.log(third)
-        console.log(third.value)
+            const third = users[0]
+            console.log(third)
+            console.log(third.value)
 
-        title.textContent = `Name: ${mini}, Value: ${third.value}`
-        carting.appendChild(title)
+            title.textContent = `Name: ${mini}, Value: ${third.value}`
+            carting.appendChild(title)
 
-        arrayhold.push(third.value)
+            arrayhold.push(third.value)
 
-    })
-    console.log(arrayhold)
-    let sumtotal = document.createElement("p")
-    const sum = arrayhold.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+        })
+        console.log(arrayhold)
+        let sumtotal = document.createElement("p")
+        const sum = arrayhold.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 
-    sumtotal.textContent = `Total: ${sum}`
-    carting.appendChild(sumtotal)
-    console.log(sum);
+        sumtotal.textContent = `Total: ${sum}`
+        carting.appendChild(sumtotal)
+        console.log(sum);
+    }
 
 }
 
