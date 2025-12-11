@@ -13,41 +13,92 @@ hamButton.addEventListener('click', () => {
     mainnav.classList.toggle('show');
     hamButton.classList.toggle('show');
 });
-
-
 //
+
+// cart functions
 function settCart() {
-    const shoppingCart = localStorage.setItem("mini", "name")
+    localStorage.setItem("cart", "name")
 }
 
 function checkCartUp() {
-    const shoppingCart = localStorage.getItem("mini")
+    const shoppingCart = localStorage.getItem("cart")
     if (shoppingCart) {
         console.log("shop cart set.")
-
     } else {
-        console.log("Shop cart not set. Please reload page.")
         settCart()
     }
 }
 //
+function clearCart() {
+    if (localStorage.getItem("cart")) {
+        localStorage.clear()
+        console.log(`clear cart function 1`)
+
+    } else {
+        localStorage.setItem("cart", "name")
+        console.log(`clear cart function 2`)
+
+    }
+}
+const clearButton = document.getElementById("clearCart")
+console.log(clearButton)
+clearButton.addEventListener("click", () => {
+    clearCart()
+    console.log(localStorage.getItem("cart"))
+})
+//
 function cartContents() {
+    const data = miniatures.miniatures
+
     const carting = document.getElementById("detail-cart")
 
+    if (localStorage.getItem("cart") === "name") {
+        console.log(`error `)
+        localStorage.clear()
 
-    const myArr = JSON.parse(localStorage.getItem("cart"))
-    console.log(myArr)
+    } else if (!localStorage.getItem("cart")) {
+        console.log(`second error`)
 
-    myArr.forEach((mini, index) => {
-        console.log(`Name: ${mini} position: ${index}`)
-        let name = document.createElement("p")
+    } else {
+        const myArr = JSON.parse(localStorage.getItem("cart"))
+        console.log(myArr)
+        console.log(data)
+        let amount = document.createElement("p")
+        amount.textContent = `Number of Items: ${myArr.length}`
+        carting.appendChild(amount)
 
-        name.textContent = `Name: ${mini}`
-        carting.appendChild(name)
-    })
 
+
+        const arrayhold = []
+        myArr.forEach((mini) => {
+            console.log(`Name: ${mini}`)
+            let title = document.createElement("p")
+
+
+            const users = data.filter(array => array.name === mini)
+            console.log(users)
+
+            const third = users[0]
+            console.log(third)
+            console.log(third.value)
+
+            title.textContent = `Name: ${mini}, Value: ${third.value}`
+            carting.appendChild(title)
+
+            arrayhold.push(third.value)
+
+        })
+        console.log(arrayhold)
+        let sumtotal = document.createElement("p")
+        const sum = arrayhold.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+        sumtotal.textContent = `Total: ${sum}`
+        carting.appendChild(sumtotal)
+        console.log(sum);
+    }
 
 }
+
 //modal
 const openDialogBtn = document.getElementById('showCart');
 const closeDialogBtn = document.getElementById('close-btn');
@@ -57,8 +108,16 @@ openDialogBtn.addEventListener('click', () => {
     myDialog.showModal();
     cartContents()
 
+    console.log("cart")
+
 });
+const clearHidden = document.getElementById("detail-cart")
 // Close the modal
 closeDialogBtn.addEventListener('click', () => {
     myDialog.close();
+    clearHidden.innerHTML = ``
+
 });
+//
+checkCartUp()
+

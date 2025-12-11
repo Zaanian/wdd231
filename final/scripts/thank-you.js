@@ -13,80 +13,50 @@ hamButton.addEventListener('click', () => {
     mainnav.classList.toggle('show');
     hamButton.classList.toggle('show');
 });
-
-
 //
-
 import { miniatures } from "../data/minis-data.mjs";
 
+//submitted data extract
+const params = new URLSearchParams(window.location.search)
 
+function submitDataShow(data) {
+    const firstname = data.get("fname")
+    const lastname = data.get("lname")
 
-//
-const cards = document.getElementById("cards");
-const displayInventoryGrid = (minis) => {
-    minis.forEach(mini => {
-        let card = document.createElement("section");
-        let name = document.createElement("h2")
-        let game = document.createElement("p")
-        let faction = document.createElement("em")
-        let photo = document.createElement("img")
+    const email = data.get("email")
+    const phone = data.get("mobile-phone")
+    const business = data.get("business")
 
-        let cartButton = document.createElement("button")
+    const timestap = data.get("time")
 
+    const display = document.getElementById("results")
+    console.log(timestap)
 
-        card.classList.add("comp-cards")
-        cartButton.classList.add("myButtons")
+    let name = document.createElement("p")
 
+    let disEmail = document.createElement("p")
+    let disPhone = document.createElement("p")
+    let nameBusi = document.createElement("p")
 
-        name.textContent = `${mini.name}`
-        game.textContent = `${mini.game}`
-        faction.textContent = `${mini.faction}`
+    let timer = document.createElement("p")
 
-        cartButton.textContent = `Add to Cart`
+    name.textContent = `Name: ${firstname} ${lastname}`
 
+    disEmail.textContent = `Email: ${email}`
+    disPhone.textContent = `Mobile Phone Number: ${phone}`
+    nameBusi.textContent = `Business Name: ${business}`
+    timer.textContent = `time: ${timestap}`
 
-        cartButton.setAttribute("type", 'button')
-        cartButton.setAttribute("data-button-id", `${mini.name}`)
+    display.appendChild(name)
 
+    display.appendChild(disEmail)
+    display.appendChild(disPhone)
+    display.appendChild(nameBusi)
 
-        photo.setAttribute("src", mini.image)
-        photo.setAttribute('alt', `image of ${mini.name}`)
-        photo.setAttribute('loading', 'lazy')
+    display.appendChild(timer)
 
-
-        card.appendChild(name)
-        card.appendChild(game)
-        card.appendChild(faction)
-        card.appendChild(photo)
-        card.appendChild(cartButton)
-
-        cards.appendChild(card)
-
-
-    });
 }
-
-displayInventoryGrid(miniatures.miniatures)
-
-
-const shopping = []
-const allbutton = document.querySelectorAll(".myButtons")
-allbutton.forEach(button => {
-    button.addEventListener('click', (event) => {
-        //
-        const buttonId = event.target.getAttribute('data-button-id');
-        console.log(`Button ${buttonId} was clicked!`);
-        shopping.push(buttonId)
-        const myJason = JSON.stringify(shopping)
-        console.log(shopping)
-
-        localStorage.setItem("cart", `${myJason}`)
-        console.log(localStorage)
-
-
-    });
-});
-
+//
 // cart functions
 function settCart() {
     localStorage.setItem("cart", "name")
@@ -193,4 +163,4 @@ closeDialogBtn.addEventListener('click', () => {
 //
 checkCartUp()
 
-
+submitDataShow(params)
