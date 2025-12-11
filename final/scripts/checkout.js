@@ -16,27 +16,41 @@ hamButton.addEventListener('click', () => {
 });
 
 import { miniatures } from "../data/minis-data.mjs";
+const url = "data/minis.json"
+async function fetchData() {
+    try {
+        const response = await fetch(url);
 
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log(data)
+        displayCartScreen(data.miniatures)
+        return data;
+    } catch (error) {
+        console.error('Fetch error:', error.message);
+        return null;
+    }
+}
 
 //checkout functions
 const cards = document.getElementById("displayCartScreen");
-function displayCartScreen() {
+function displayCartScreen(data) {
     if (localStorage.getItem("cart")) {
         const cartData = JSON.parse(localStorage.getItem("cart"))
         console.log(cartData)
-        const data2 = miniatures.miniatures
+        const data2 = data
+        console.log(data2)
         const arrayhold2 = []
         cartData.forEach((mini) => {
 
             const itemValue = data2.filter(array => array.name === mini)
             const third = itemValue[0]
-
             arrayhold2.push(third.value)
-
             let itemName = document.createElement("p")
-
             itemName.textContent = `Name: ${mini}  Cost: ${third.value}`
-
             cards.appendChild(itemName)
         })
         let sumtotal = document.createElement("p")
@@ -49,11 +63,6 @@ function displayCartScreen() {
         settCart()
     }
 }
-displayCartScreen()
-
-console.log(localStorage.getItem("cart"))
-
-
 
 // cart functions
 function settCart() {
@@ -77,15 +86,16 @@ function clearCart() {
     } else {
         localStorage.setItem("cart", "name")
         console.log(`clear cart function 2`)
-
     }
 }
+
 const clearButton = document.getElementById("clearCart")
 console.log(clearButton)
 clearButton.addEventListener("click", () => {
     clearCart()
     console.log(localStorage.getItem("cart"))
 })
+
 //
 function cartContents() {
     const data = miniatures.miniatures
@@ -132,7 +142,6 @@ function cartContents() {
         carting.appendChild(sumtotal)
         console.log(sum);
     }
-
 }
 
 //modal
@@ -145,8 +154,8 @@ openDialogBtn.addEventListener('click', () => {
     cartContents()
 
     console.log("cart")
-
 });
+
 const clearHidden = document.getElementById("detail-cart")
 // Close the modal
 closeDialogBtn.addEventListener('click', () => {
@@ -155,4 +164,6 @@ closeDialogBtn.addEventListener('click', () => {
 
 });
 //
+
 checkCartUp()
+fetchData()
