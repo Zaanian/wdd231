@@ -50,13 +50,13 @@ function displayCartScreen(data) {
             const third = itemValue[0]
             arrayhold2.push(third.value)
             let itemName = document.createElement("p")
-            itemName.textContent = `Name: ${mini}  Cost: ${third.value}`
+            itemName.textContent = `Name: ${mini}  Cost: ${third.value}$`
             cards.appendChild(itemName)
         })
         let sumtotal = document.createElement("p")
         const sum = arrayhold2.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 
-        sumtotal.textContent = `Total: ${sum}`
+        sumtotal.textContent = `Total: ${sum}$`
         cards.appendChild(sumtotal)
 
     } else {
