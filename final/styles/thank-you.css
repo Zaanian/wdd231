@@ -72,8 +72,21 @@ li {
     display: block;
 }
 
-
+h1 {
+    animation: fadecolorNP 3s ease 60ms infinite alternate;
+}
 
 #menu {
     font-size: xx-large;
+}
+
+@keyframes fadecolorNP {
+    from {
+        background-color: rgb(77, 64, 38);
+    }
+
+    to {
+        background-color: rgb(209, 61, 20);
+    }
+
 }
