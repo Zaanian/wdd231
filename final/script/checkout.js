@@ -16,7 +16,36 @@ hamButton.addEventListener('click', () => {
 });
 
 
-
+console.log(localStorage)
 
 
 //
+function cartContents() {
+    const carting = document.getElementById("detail-cart")
+
+
+    const myArr = JSON.parse(localStorage.getItem("cart"))
+    console.log(myArr)
+
+    myArr.forEach((mini, index) => {
+        console.log(`Name: ${mini} position: ${index}`)
+        let name = document.createElement("p")
+
+        name.textContent = `Name: ${mini}`
+        carting.appendChild(name)
+    })
+}
+//modal
+const openDialogBtn = document.getElementById('showCart');
+const closeDialogBtn = document.getElementById('close-btn');
+const myDialog = document.getElementById('cart-details');
+// Open the modal
+openDialogBtn.addEventListener('click', () => {
+    myDialog.showModal();
+    cartContents()
+
+});
+// Close the modal
+closeDialogBtn.addEventListener('click', () => {
+    myDialog.close();
+});

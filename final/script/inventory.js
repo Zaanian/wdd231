@@ -14,6 +14,7 @@ hamButton.addEventListener('click', () => {
     hamButton.classList.toggle('show');
 });
 
+
 //
 
 import { miniatures } from "../data/minis-data.mjs";
@@ -27,7 +28,7 @@ const displayInventoryGrid = (minis) => {
         let game = document.createElement("p")
         let faction = document.createElement("em")
         let photo = document.createElement("img")
-        let button = document.createElement("button")
+
         let cartButton = document.createElement("button")
 
 
@@ -38,10 +39,10 @@ const displayInventoryGrid = (minis) => {
         name.textContent = `${mini.name}`
         game.textContent = `${mini.game}`
         faction.textContent = `${mini.faction}`
-        button.textContent = `Details`
+
         cartButton.textContent = `Add to Cart`
 
-        button.setAttribute("type", 'button')
+
         cartButton.setAttribute("type", 'button')
         cartButton.setAttribute("data-button-id", `${mini.name}`)
 
@@ -55,7 +56,6 @@ const displayInventoryGrid = (minis) => {
         card.appendChild(game)
         card.appendChild(faction)
         card.appendChild(photo)
-        card.appendChild(button)
         card.appendChild(cartButton)
 
         cards.appendChild(card)
@@ -91,8 +91,9 @@ function addToCart() {
 
 
 }
-
+//
 const shopping = []
+localStorage.setItem("cart", "name")
 
 const allbutton = document.querySelectorAll(".myButtons")
 allbutton.forEach(button => {
@@ -101,14 +102,61 @@ allbutton.forEach(button => {
         const buttonId = event.target.getAttribute('data-button-id');
         console.log(`Button ${buttonId} was clicked!`);
         shopping.push(buttonId)
+        const myJason = JSON.stringify(shopping)
         console.log(shopping)
+
+        localStorage.setItem("cart", `${myJason}`)
+        console.log(localStorage)
+
 
     });
 });
+//
+
+function cartContents() {
+    const carting = document.getElementById("detail-cart")
+    
+
+    const myArr = JSON.parse(localStorage.getItem("cart"))
+    console.log(myArr)
+
+    myArr.forEach((mini, index) => {
+        console.log(`Name: ${mini} position: ${index}`)
+        let name = document.createElement("p")
+
+        name.textContent = `Name: ${mini}`
+        carting.appendChild(name)
+    })
 
 
+}
 
-console.log(allbutton)
+const names = ['John', 'Jane', 'Jim'];
+
+names.forEach((name, index) => {
+    console.log(`${name} is at position ${index}`);
+});
+
+
+//modal
+const openDialogBtn = document.getElementById('showCart');
+const closeDialogBtn = document.getElementById('close-btn');
+const myDialog = document.getElementById('cart-details');
+// Open the modal
+openDialogBtn.addEventListener('click', () => {
+    myDialog.showModal();
+    cartContents()
+
+});
+// Close the modal
+closeDialogBtn.addEventListener('click', () => {
+    myDialog.close();
+});
+
+
+console.log(localStorage)
+
+
 
 
 //
