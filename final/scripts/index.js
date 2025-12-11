@@ -14,7 +14,7 @@ hamButton.addEventListener('click', () => {
     hamButton.classList.toggle('show');
 });
 //
-
+import { miniatures } from "../data/minis-data.mjs";
 // cart functions
 function settCart() {
     localStorage.setItem("cart", "name")

@@ -17,6 +17,44 @@ hamButton.addEventListener('click', () => {
 
 import { miniatures } from "../data/minis-data.mjs";
 
+
+//checkout functions
+const cards = document.getElementById("displayCartScreen");
+function displayCartScreen() {
+    if (localStorage.getItem("cart")) {
+        const cartData = JSON.parse(localStorage.getItem("cart"))
+        console.log(cartData)
+        const data2 = miniatures.miniatures
+        const arrayhold2 = []
+        cartData.forEach((mini) => {
+
+            const itemValue = data2.filter(array => array.name === mini)
+            const third = itemValue[0]
+
+            arrayhold2.push(third.value)
+
+            let itemName = document.createElement("p")
+
+            itemName.textContent = `Name: ${mini}  Cost: ${third.value}`
+
+            cards.appendChild(itemName)
+        })
+        let sumtotal = document.createElement("p")
+        const sum = arrayhold2.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+        sumtotal.textContent = `Total: ${sum}`
+        cards.appendChild(sumtotal)
+
+    } else {
+        settCart()
+    }
+}
+displayCartScreen()
+
+console.log(localStorage.getItem("cart"))
+
+
+
 // cart functions
 function settCart() {
     localStorage.setItem("cart", "name")
@@ -63,8 +101,6 @@ function cartContents() {
 
     } else {
         const myArr = JSON.parse(localStorage.getItem("cart"))
-        console.log(myArr)
-        console.log(data)
         let amount = document.createElement("p")
         amount.textContent = `Number of Items: ${myArr.length}`
         carting.appendChild(amount)
@@ -75,12 +111,10 @@ function cartContents() {
         myArr.forEach((mini) => {
             console.log(`Name: ${mini}`)
             let title = document.createElement("p")
+            const itemValue = data.filter(array => array.name === mini)
+            console.log(itemValue)
 
-
-            const users = data.filter(array => array.name === mini)
-            console.log(users)
-
-            const third = users[0]
+            const third = itemValue[0]
             console.log(third)
             console.log(third.value)
 

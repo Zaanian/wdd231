@@ -77,3 +77,15 @@ li {
 #menu {
     font-size: xx-large;
 }
+
+fieldset {
+    margin: 10px;
+}
+
+fieldset label {
+    margin: 5px;
+}
+
+fieldset input {
+    margin: 5px;
+}

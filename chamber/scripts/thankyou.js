@@ -31,7 +31,6 @@ function submitDataShow(data) {
     console.log(timestap)
 
     let name = document.createElement("p")
-
     let disEmail = document.createElement("p")
     let disPhone = document.createElement("p")
     let nameBusi = document.createElement("p")
@@ -46,7 +45,6 @@ function submitDataShow(data) {
     timer.textContent = `time: ${timestap}`
 
     display.appendChild(name)
-
     display.appendChild(disEmail)
     display.appendChild(disPhone)
     display.appendChild(nameBusi)

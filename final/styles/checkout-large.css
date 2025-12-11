@@ -15,8 +15,17 @@
         margin: 10px;
     }
 
-    
+    #contain {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
 
+    #displayCartScreen {
+        margin: 5px;
+        padding: 5px;
+        border: solid;
+        text-align: left;
+    }
 
 
 }
